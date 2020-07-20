@@ -1,0 +1,11 @@
+function [feat]=getfeatures(z,test_gray_cc)
+[r2,c2]=size(z);
+ar=c2/r2;
+dens=density(z);
+cog=cg(test_gray_cc);
+cog(1)=cog(1)/c2;
+cog(2)=cog(2)/r2;
+attrib=test(z);
+attrib_new1=noIntersectionsAndDistFarPixelEWNSDir2(z);
+attrib_new2=noIntersectionsAndDistFarPixelCornerEWNSDir2(z);
+feat=horzcat(ar,dens,cog,attrib,attrib_new1,attrib_new2);

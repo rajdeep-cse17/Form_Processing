@@ -1,0 +1,16 @@
+function [out1]=getfeatures_alphanum(z,test_gray_cc)
+[r2,c2]=size(z);
+out1=getfeatures(z,test_gray_cc);
+% A=z(1:floor(r2/2),1:floor(c2/2));
+%             B=z(1:floor(r2/2),floor(c2/2)+1:c2);
+%             C=z(floor(r2/2)+1:r2,1:floor(c2/2));
+%             D=z(floor(r2/2)+1:r2,floor(c2/2)+1:c2);
+%             A_gray=test_gray_cc(1:floor(r2/2),1:floor(c2/2));
+%             B_gray=test_gray_cc(1:floor(r2/2),floor(c2/2)+1:c2);
+%             C_gray=test_gray_cc(floor(r2/2)+1:r2,1:floor(c2/2));
+%             D_gray=test_gray_cc(floor(r2/2)+1:r2,floor(c2/2)+1:c2);
+%             out2=getfeatures(A,A_gray);
+%             out3=getfeatures(B,B_gray);
+%             out4=getfeatures(C,C_gray);
+%             out5=getfeatures(D,D_gray);
+%             feat=horzcat(out1,out2,out3,out4,out5);

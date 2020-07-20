@@ -1,0 +1,10 @@
+function [feat]=getSirFeature(img)
+feat1=sirfeatureNSEWcentroid(img);
+feat2=sirFeatureCornerCentroid(img);
+feat3=sirfeatureNSEWgeocentre(img);
+feat4=sirFeatureCornerGeometricCentre(img);
+feat5=horzcat(feat1,feat2);
+feat6=horzcat(feat3,feat4);
+feat7=norm(feat5-feat6);
+feat8=abs(feat5-feat6);
+feat=horzcat(feat6,feat8,feat7);
